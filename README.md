@@ -9,14 +9,14 @@ This fork has been created to be compatible with latest versions of react.
 ## Installation
 
 ```
-npm i react-qr-barcode-scanner
+npm i react-barcode-scanner-webcam
 ```
 
 ## Usage in React:
 
 ```jsx
 import React from "react";
-import BarcodeScannerComponent from "react-qr-barcode-scanner";
+import BarcodeScannerComponent from "react-barcode-scanner-webcam";
 
 function App() {
   const [data, setData] = React.useState("Not Found");
@@ -110,7 +110,7 @@ These formats are supported by ZXing:
 
 - The camera can only be accessed over https or localhost
 - Browser compatibility is limited by react-webcam's usage of the Stream API: https://caniuse.com/stream. On iOS-Devices with iOS < 14.3 camera access works only in native Safari and not in other Browsers (Chrome, etc) or Apps that use an UIWebView or WKWebView. iOS 14.3 (released in December 2020) now supports WebRTC in 3rd party browsers as well.
-- There is a bug in the `react-webcam` package that causes the browser to freeze when the component is unmounted or removed, or the camera video constraints are changed (for example, switching cameras or navigating away from the screen with the camera component). Please see this thread regarding the reported issue: https://github.com/mozmorris/react-webcam/issues/244. As a workaround, `react-qr-barcode-scanner` allows passing a `stopStream` prop to stop the video streams when `true` is passed, allowing you to close the stream before unmounting the component or doing some other action that may cause the freeze. I found I needed to set a timeout to wait one tick before dismissing the modal in my use case to prevent the freeze. **PRs to improve this issue are welcome!**
+- There is a bug in the `react-webcam` package that causes the browser to freeze when the component is unmounted or removed, or the camera video constraints are changed (for example, switching cameras or navigating away from the screen with the camera component). Please see this thread regarding the reported issue: https://github.com/mozmorris/react-webcam/issues/244. As a workaround, `react-barcode-scanner-webcam` allows passing a `stopStream` prop to stop the video streams when `true` is passed, allowing you to close the stream before unmounting the component or doing some other action that may cause the freeze. I found I needed to set a timeout to wait one tick before dismissing the modal in my use case to prevent the freeze. **PRs to improve this issue are welcome!**
 
   Example:
 

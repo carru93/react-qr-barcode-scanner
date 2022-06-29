@@ -4,6 +4,8 @@ This is a simple React component built in Typescript to provide a webcam-based b
 
 Thanks to the initial repo: https://github.com/dashboardphilippines/react-webcam-barcode-scanner
 
+This fork has been created to be compatible with latest versions of react.
+
 ## Installation
 
 ```

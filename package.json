@@ -1,5 +1,5 @@
 {
-  "name": "react-webcam-barcode-scanner",
+  "name": "react-barcode-scanner-webcam",
   "version": "1.0.0",
   "description": "A React Component using the client's webcam to read barcodes and QR codes.",
   "main": "dist/index.js",
